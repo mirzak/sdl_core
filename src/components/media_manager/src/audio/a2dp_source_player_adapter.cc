@@ -91,7 +91,7 @@ void A2DPSourcePlayerAdapter::StartActivity(int32_t application_key) {
   if (application_key != current_application_) {
     current_application_ = application_key;
 
-    uint32_t device_id = 0;
+    connection_handler::DeviceHandle device_id = 0;
     session_observer_.GetDataOnSessionKey(application_key, 0, NULL, &device_id);
     std::string mac_adddress;
     session_observer_.GetDataOnDeviceID(device_id, NULL, NULL, &mac_adddress);
